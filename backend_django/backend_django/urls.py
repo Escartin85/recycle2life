@@ -19,4 +19,8 @@ from django.urls import path, include
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
+    path('api/ads/', include('ads.api.urls')),
+    path('api/ad_tags/', include('ad_tags.api.urls')),
+    path('api/ad_categories/', include('ad_categories.api.urls')),
+    path('api/images/', include('images.api.urls')),
 ]

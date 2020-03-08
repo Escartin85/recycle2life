@@ -1,0 +1,25 @@
+{
+    "python.pythonPath": "/usr/bin/python3.7",
+    "python.linting.pycodestyleEnabled": false,
+    "python.linting.pylintPath": "pylintsd",
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django"
+    ],
+    "python.linting.pylintEnabled": false,
+    //"python.venvPath": "${workspaceFolder}../vEnv/bin/python3",
+    "python.venvPath": "/home/batman/DEV/WebApp/RECYCLE_2LIFE/vEnv/bin/python3",
+    "python.linting.pycodestyleArgs": [
+        "--ignore=E501"
+    ],
+    "git.ignoreLimitWarning": true,
+    "python.linting.enabled": true,
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}../vEnv/lib/python3.7/site-packages",
+        "/home/batman/DEV/WebApp/RECYCLE_2LIFE/vEnv/bin/python3",
+        "/home/batman/DEV/WebApp/RECYCLE_2LIFE/vEnv/lib/python3.7/site-packages"
+    ],
+    "python.analysis.disabled": [
+        "unresolved-import"
+    ],
+}
