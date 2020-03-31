@@ -4,12 +4,15 @@ from .views import (
     ImageListAPIView,
     ImageDetailAPIView,
     ImageUpdateAPIView,
-    ImageDeleteAPIView
+    ImageDeleteAPIView,
+    ImageCreateAPIView
 )
 
+app_name = 'images'
 urlpatterns = [
-    path('', ImageListAPIView.as_view(), name='list-image'),
-    path('<pk>', ImageDetailAPIView.as_view(), name='detail-image'),
-    path('<pk>/edit/', ImageUpdateAPIView.as_view(), name='update-image'),
-    path('<pk>/delete/', ImageDeleteAPIView.as_view(), name='delete-image'),
+    path('', ImageListAPIView.as_view(), name='listIMG'),
+    path('<int:id>', ImageDetailAPIView.as_view(), name='detailIMG'),
+    path('<int:id>/edit/', ImageUpdateAPIView.as_view(), name='updateIMG'),
+    path('<int:id>/delete/', ImageDeleteAPIView.as_view(), name='deleteIMG'),
+    path('create/', ImageCreateAPIView.as_view(), name='createIMG'),
 ]

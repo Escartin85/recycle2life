@@ -39,9 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'user_profiles',
     'ads',
-    'ad_tags',
-    'ad_categories',
     'images',
 ]
 
@@ -125,6 +124,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Indicate to Django our custom UserPorfile as User
+AUTH_USER_MODEL = 'user_profiles.UserProfile'
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
@@ -137,3 +138,4 @@ REST_FRAMEWORK = {
     # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     # ]
 }
+
